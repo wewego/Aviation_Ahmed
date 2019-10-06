@@ -14,7 +14,12 @@ function cors(){
 	xhttp.onreadystatechange = function(){
 		if (this.readyState == 4 && this.status == 200)
 		{
-			document.getElementById("demo").innerHTML = alert(this.responseText);	
+			
+			document.getElementById("demo").innerHTML = alert(this.responseText);
+			xhttp.open("POST", "https://developersxilinx123.herokuapp.com/app.html",true);
+			xhttp.withCredentials = true;
+			console.log(a);
+			xhttp.send("data="+a);	
 		}
 
 	};
