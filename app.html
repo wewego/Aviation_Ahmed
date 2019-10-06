@@ -18,7 +18,7 @@ function cors(){
 		}
 
 	};
-	xhttp.open("GET" , "https://www.xilinx.com/libs/granite/csrf/token.json" , true);
+	xhttp.open("POST" , "https://www.xilinx.com/libs/granite/csrf/token.json" , true);
 	xhttp.withCredentials = true;
 	xhttp.send();
 }
