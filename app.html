@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title></title>
 	<style>
 		body
 		{
 			margin: 20px;
+			overflow: scroll;
 		}
 	
-		section
+		#section-1
 		{
 			width: 100%;
 			height: 900px;
@@ -35,6 +39,8 @@
 			color: white;
 			font-size: 60px;
 			letter-spacing: 30px;
+			animation-name: animh1;
+			animation-duration: 1.5s;
 		}
 		h3
 		{
@@ -42,18 +48,36 @@
 			color: white;
 			font-size: 22px;
 			letter-spacing: 14px;
+			animation-name: animh3;
+			animation-duration: 1.5s;
 
 		}
 		button
 		{
+			animation-name: animbutton;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
 			border-radius: 200px;
 			color: black;
 			background-color: white;
 			width: 200px;
 			height: 50px;
-			text-transform:uppercase;
+			
+			
+			/*
+			  grow rotate
+			*/
 		}
-		#rec
+		#section-2
+		{
+			width: 100%;
+			height: 900px;
+			position: relative;
+		}
+
+		
+
+		.rec-1
 		{
           
           width: 100%;
@@ -65,13 +89,139 @@
 		  clip-path: polygon(100% 91%, 0 100%, 100% 100%);
 
 		}
+		.rec-2
+		{
+		  width: 100%;
+		  height: 200px;
+          position: absolute;
+		  clip-path: polygon(0 0, 0 100%, 100% 0);
+		  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+
+		}
+		@keyframes animh3{
+			0%
+			{
+				opacity:0;
+			    transform:translateX(-50rem);
+			}
+			80%{
+				transform: translateX(-5rem);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(0);
+			}
+			
+
+		}
+		@keyframes animh1{
+			0%
+			{
+				opacity:0;
+			    transform:translateX(50rem);
+			}
+			80%{
+				transform: translateX(5rem);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(0);
+			}
+			
+
+		}
+			@keyframes animbutton{
+			0%
+			{
+				opacity:0;
+			    transform:translateY(50rem);
+			   
+			}
+			80%{
+				transform: translateY(5rem);
+				
+			}
+			100%{
+				opacity: 1;
+				transform: translateY(0);
+				
+			}
+			
+			
+			
+		}
+  .exciting-title{
+  text-transform: uppercase;
+  background: linear-gradient(to right, #7ed56f 0%, #28b485 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  margin: 100px 0 0 0 ;
+}
+.exciting-title:hover
+{
+
+  animation: exciting-title;
+
+  animation-duration: 0.7s;
+
+}
+@keyframes exciting-title
+{
+0%{opacity: 0%;}
+100%{opacity: 100%;
+  transform: skew(10deg, 5deg);
+}
+}
+.Paragraphs{
+  width: 50%;
+  font-size: 20px;
+  margin: 4em 0 1em 5em;
+  font-family: 'Roboto', sans-serif;
+  line-height: 25px;
+
+  color: #696969;
+
+}
+.Paragraphs h2
+{ 
+  font-size: 25px;
+  margin: 1.5em 0 1.5em 0;
+  color: #5c5c5c;
+}
+
+.Paragraphs button{
+  background-color: #ffffff;
+  border-width:0 0 2px 0;
+  border-color: #7ed56f;
+  color: #7ed56f;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.Paragraphs button:hover{
+
+  animation:learn-more;
+  animation-duration: 0.5s;
+}
+@keyframes learn-more
+{
+  0%{}
+  100%{
+    background-color: #55c57a;
+    color: white;
+  }
+}
+
+		
+	
+		
 	
 	</style>
 </head>
 <body>
 
 	
-	<section>
+	<section id="section-1">
 
 		<div class="overlay">
 			
@@ -84,11 +234,45 @@
 				<br>
 				<button>discover our tour</button>
 			</center>
-			<img src="rec.png" id="rec" />
+			<img src="rec.png" class="rec-1" />
 		</div>
 
 
 	</section>
+	<br>
+	<br>
+	<CENTER>
+		<h2 class="exciting-title">EXCITING TOURS FOR ADVENTEROUS PEOPLE</h1>
+	</CENTER>
+	<br>
+	<br>
+	 <div class="Paragraphs">
+      <!-- Paragraphs -->
+      <h2 >You're going to fall in love with nature</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</p>
+
+      <h2>Live adventures like you never have before</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+
+      <button>Learn more 🠒</button>
+    </div>
+    <section id="section-2">
+
+		<div class="overlay">
+			
+			<img src="rec.png" class="rec-2" />
+		</div>
+
+
+	</section>
+  
 	
 
 </body>
