@@ -1,0 +1,294 @@
+	body
+		{
+			margin: 20px;
+			overflow: scroll;
+		}
+	
+		.sections
+		{
+			width: 100%;
+			height: 900px;
+			background-image: url("hero.jpg");
+			background-size: cover;
+			position: relative;
+			overflow: hidden;
+		}
+		.overlay
+		{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background:rgba(0,255,93,0.7);
+			content-float:left;
+
+		}
+		#logo
+		{
+			margin: 50px;
+		}
+		h1
+		{
+			text-transform: uppercase;
+			color: white;
+			font-size: 60px;
+			letter-spacing: 30px;
+			animation-name: animh1;
+			animation-duration: 1.5s;
+		}
+		h3
+		{
+			text-transform: uppercase;
+			color: white;
+			font-size: 22px;
+			letter-spacing: 14px;
+			animation-name: animh3;
+			animation-duration: 1.5s;
+
+		}
+		button
+		{
+			animation-name: animbutton;
+			animation-duration: 1s;
+			animation-fill-mode: backwards;
+			animation-delay: 1.5s;
+			border-radius: 200px;
+			color: black;
+			background-color: white;
+			width: 200px;
+			height: 50px;
+			transition:all 0.7s;
+
+			text-decoration:none;
+			transition: all .3s;
+			
+		}
+		button:hover
+		{
+			transform: translateY(-3px); 
+		}
+		button::after
+		{
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			display:block;
+			border-radius: 10rem;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			background-color: white;
+			transition: all .3s;
+
+		}
+		button:hover::after{
+			transform: scale(1.4,1.6);
+			opacity: 0;
+		}
+		
+		.rec-1
+		{
+          
+          width: 100%;
+          height: 50rem;
+          position: absolute;
+		  right: 0px;
+          bottom: 0px;
+		  clip-path: polygon(100% 91%, 0 100%, 100% 100%);
+
+		}
+		@keyframes animh3{
+			0%
+			{
+				opacity:0;
+			    transform:translateX(50rem);
+			}
+			80%{
+				transform: translateX(-5rem);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(0);
+			}
+			
+
+		}
+		@keyframes animh1{
+			0%
+			{
+				opacity:0;
+			    transform:translateX(-50rem);
+			}
+			80%{
+				transform: translateX(5rem);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(0);
+			}
+			
+
+		}
+			@keyframes animbutton{
+			0%
+			{
+				opacity:0;
+			    transform:translateY(50rem);
+			   
+			}
+		
+			100%{
+				opacity: 1;
+				transform: translateY(0);
+				
+			}
+			
+			
+			
+		}
+  .exciting-title{
+  text-transform: uppercase;
+  background: linear-gradient(to right, #7ed56f 0%, #28b485 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  margin: 100px 0 0 0 ;
+}
+.exciting-title:hover
+{
+
+  animation: exciting-title;
+
+  animation-duration: 0.7s;
+
+}
+@keyframes exciting-title
+{
+0%{opacity: 0%;}
+100%{opacity: 100%;
+  transform: skew(10deg, 5deg);
+}
+}
+.Paragraphs{
+  width: 50%;
+  font-size: 20px;
+  margin: 4em 0 1em 5em;
+  font-family: 'Roboto', sans-serif;
+  line-height: 25px;
+
+  color: #696969;
+  float:left;
+
+}
+.Paragraphs h2
+{ 
+  font-size: 25px;
+  margin: 1.5em 0 1.5em 0;
+  color: #5c5c5c;
+}
+
+.Paragraphs button{
+  background-color: #ffffff;
+  border-width:0 0 2px 0;
+  border-color: #7ed56f;
+  color: #7ed56f;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.Paragraphs button:hover{
+
+  animation:learn-more;
+  animation-duration: 0.5s;
+}
+@keyframes learn-more
+{
+  0%{}
+  100%{
+    background-color: #55c57a;
+    color: white;
+  }
+}
+#images
+{
+	float: right;
+	position: absolute;
+	
+}
+.images-1
+{
+	position: relative;
+}
+
+.thirdpage
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	clip-path: polygon(0 10%, 100% 0%, 100% 88%, 0% 100%);
+  			
+  			
+
+
+}
+.overlay1{
+	background:rgba(0,255,93,0.7);
+	width: 100%;
+	height:100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.cards
+{
+	position: relative;
+	margin: 0 auto;
+	width: 18rem;
+	height:25rem;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255,255,255,0.8);
+	box-shadow: 2rem 2rem 3rem;
+	text-align: center;
+
+}
+.cards p
+{
+	position: relative;
+	top: 9rem;
+}
+h2
+{
+	position: relative;
+	top: 7rem;
+}
+.card-images-1
+{
+	position: relative;
+	width: 4rem;
+	top: 4rem;
+}
+.fourthpage
+{
+		width: 100%;
+		height: 900px;
+		background-size: cover;
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+}
+.overlay2{
+	width: 100%;
+	height:100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.card-images-2
+{
+	position: relative;
+	width: 100%;
+	height: 40%;
+}
