@@ -1,1 +1,4 @@
-<?php header('Location: /app.html');?>
+<?php 
+echo "Hey";
+header('Location: /app.html');
+?>

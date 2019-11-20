@@ -35,6 +35,26 @@
 			animation-name: animh1;
 			animation-duration: 1.5s;
 		}
+		@media only screen and (max-width: 600px) {
+			h1
+  			{
+    			font-size: 1rem;
+    			letter-spacing: 1rem;
+  			}
+  			#logo
+  			{
+  				width: 50px;
+  			}
+  			.sections
+  			{
+  				width: 600px;
+  			}
+  			.cards
+  			{
+  				width: 8px;
+				height:5px;
+  			}  			
+		}
 		h3
 		{
 			text-transform: uppercase;
@@ -152,7 +172,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 35px;
-  margin: 100px 0 0 0 ;
+  margin: 100px 0 60px 0 ;
+  text-align: center;
 }
 .exciting-title:hover
 {
@@ -169,8 +190,14 @@
   transform: skew(10deg, 5deg);
 }
 }
+
+.container::after{
+	content: "";
+	display: table;
+	clear:both;
+}
 .Paragraphs{
-  width: 50%;
+  width: 42%;
   font-size: 20px;
   margin: 4em 0 1em 5em;
   font-family: 'Roboto', sans-serif;
@@ -178,7 +205,43 @@
 
   color: #696969;
   float:left;
+  position: relative;
 
+}
+
+.Paragraphs::after{
+	content: "";
+	display: table;
+	clear:both;
+}
+.Paragraphs-2
+{
+	position: relative;
+	float: left;
+	width: 42%;
+	margin: 4em 0 1em 5em;
+}
+.
+.img1{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.img2{
+	position: absolute;
+	top: 2rem;
+	right: 0;
+
+}
+.img3{
+	position: absolute;
+	top: 10rem;
+	left: 5rem;
+}
+.Paragraphs-2::after{
+	content: "";
+	display: table;
+	clear:both;
 }
 .Paragraphs h2
 { 
@@ -218,15 +281,13 @@
 {
 	position: relative;
 }
-
 .thirdpage
 {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	clip-path: polygon(0 10%, 100% 0%, 100% 88%, 0% 100%);
-  			
-  			
+  				
 
 
 }
@@ -247,10 +308,11 @@
 	width: 18rem;
 	height:25rem;
 	top: 50%;
-	transform: translateY(-50%);
 	background: rgba(255,255,255,0.8);
 	box-shadow: 2rem 2rem 3rem;
 	text-align: center;
+  	transform-style: preserve-3d;
+    transition: all 0.8s ease;
 
 }
 .cards p
@@ -267,7 +329,6 @@ h2
 {
 	position: relative;
 	width: 4rem;
-	top: 4rem;
 }
 .fourthpage
 {
@@ -281,7 +342,6 @@ h2
 .overlay2{
 	width: 100%;
 	height:100%;
-
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -291,4 +351,65 @@ h2
 	position: relative;
 	width: 100%;
 	height: 40%;
+}
+.cards:hover{
+  transform: rotateY(180deg);
+}
+.thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background-color: orange;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+.cards-first
+{
+	position: relative;
+	margin: 0 auto;
+	width: 18rem;
+	height:25rem;
+	top: 50%;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 2rem 2rem 3rem;
+	text-align: center;
+
+}
+h4 , p
+{
+	position: relative;
+
+}
+@media only screen and (max-width: 600px) {
+			
+  			.cards
+  			{
+  				width: 10rem;
+  			}
+  			h2
+  			{
+  				position: relative;
+				top: 3rem;
+  			}
+  			body
+			{	
+				margin:0;
+				overflow: scroll;
+			}
+	  			
 }
